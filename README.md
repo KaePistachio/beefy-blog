@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, in a separate terminal window from your react development server you can run:
 
-### `npx json-server --watch data/db.json --port 8000`
+### `npm run json-server`
 
 Runs the data provider service, this must be running for the app to work.
 
