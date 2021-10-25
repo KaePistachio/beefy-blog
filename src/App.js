@@ -4,8 +4,8 @@ import Home from './components/Home.js';
 import Create from './components/Create.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import BlogDetails from './components/BlogDetails';
-import Author from './components/Author';
 import { NotFound } from 'http-errors';
+import Update from './components/Update.js'
 
 function App() {
   return (
@@ -22,6 +22,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails />
+            </Route>
+            <Route>
+              <Update path="/update" />
             </Route>
             <Route path="*">
               <NotFound />

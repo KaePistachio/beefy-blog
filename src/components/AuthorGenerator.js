@@ -40,7 +40,7 @@ const AuthorGenerator = () => {
         }
     
     const author = `${adjectiveSelect(min, adjMax)} ${animalSelect(min, aniMax)}`;
-    //console.log(author);
+    console.log(author);
     return author;
 }
 

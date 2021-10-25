@@ -15,6 +15,10 @@ const BlogDetails = () => {
     });
   } 
 
+  const handleUpdate = () => {
+    history.push('/update');
+  }
+
   return (
     <div className="blog-details">
       { isPending && <div>Loading...</div>}
@@ -25,6 +29,7 @@ const BlogDetails = () => {
               <p>Written by { blog.author }</p>
               <div>{ blog.body }</div>
               <button onClick={handleClick}>Delete Post</button>
+              <button onClick={handleUpdate}>Update Post</button>
           </article>
       )}
     </div>

@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import useFetch from "./useFetch";
 import AuthorGenerator from "./AuthorGenerator";
 
-const Create = () => {
+const Update = () => {
+    const { id } = useParams();
+    const { data: blog, error, } = useFetch("http://localhost:8000/blogs/" + id);
     const [ title, setTitle ] = useState('');
     const [ body, setBody ] = useState('');
     const [ author, setAuthor ] = useState('');
@@ -18,12 +22,12 @@ const Create = () => {
 
         blog.author = blog.author === 'generate' ? AuthorGenerator() : blog.author;
         
-        fetch('http://localhost:8000/blogs', {
-          method: 'POST',
+        fetch('http://localhost:8000/blogs/3', {
+          method: 'PUT',
           headers: { "Content-Type": "application/json"},
           body: JSON.stringify(blog)
         }).then(() => {
-          console.log('new blog added');
+          console.log('blog updated');
           setIsPending(false);
           history.push('/');
         })
@@ -31,7 +35,7 @@ const Create = () => {
 
     return ( 
         <div className="create">
-          <h2>Add A New Blog</h2>
+          <h2>Update Blog Post</h2>
           <form onSubmit={handleSubmit}>
             <label>Blog title:</label>
             <input 
@@ -57,11 +61,11 @@ const Create = () => {
               <option value="solidus">Solidus</option>
               <option value={ "generate" }>Generate Random Author Name</option>
             </select>
-            { !isPending && <button>Add Post</button> }
-            { isPending && <button disabled >Adding Post...</button> }
+            { !isPending && <button>Update Post</button> }
+            { isPending && <button disabled >Updating Post...</button> }
           </form>
         </div>
      );
 }
  
-export default Create;
+export default Update;
