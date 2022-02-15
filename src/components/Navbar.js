@@ -1,12 +1,18 @@
 import { Link } from 'react-router-dom';
+import img from "./foxhound.png";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <h1>The Beefy Blog</h1>
+            <img 
+                className="navimg"
+                src={ img }
+                alt="Foxhound"
+            />
+            <h1>the fox blog</h1>
             <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/create">New Blog</Link>
+                <Link to="/">home</Link>
+                <Link to="/create">new blog</Link>
             </div>
         </nav>
     );
