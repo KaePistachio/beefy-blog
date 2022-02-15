@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Share+Tech+Mono&family=Major+Mono+Display&display=swap');
 
 :root {
   --bg: rgb(54, 49, 68);
@@ -11,15 +11,15 @@
 * {
   margin: 0;
   background-color: var(--bg);
-  font-family: "Abel";
+  font-family: "Share Tech Mono";
   color: var(--text-white);
 }
 
 .navbar {
+  display: flex;
   background-color: var(--div-bg);
   color: var(--text-white);
   padding: 20px;
-  display: flex;
   align-items: center;
   max-width: 600px;
   height: 100px;
@@ -37,14 +37,15 @@
   font-family: "Major Mono Display";
   background-color: var(--div-bg);
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 .navbar a {
   font-family: "Major Mono Display";
   background-color: var(--div-bg);
   font-size: 1rem;
   color: #ddd;
-  margin-left: 6px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-decoration: none;
   padding: 6px;
 }
@@ -84,7 +85,7 @@
 
 .blog-preview {
   background-color: var(--div-bg);
-  font-family: "Abel";
+  font-family: "Share Tech Mono";
   padding: 20px 16px;
   margin: -2px 0;
   border: 2px solid var(--border);
@@ -94,7 +95,7 @@
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
 .blog-preview h2 {
-  font-family: "Abel";
+  font-family: "Share Tech Mono";
   background-color: var(--div-bg);
   font-size: 20px;
   color: var(--border);
@@ -103,13 +104,13 @@
 
 .bloglink{
   color: var(--border);
-  font-family: "Abel";
+  font-family: "Share Tech Mono";
   text-decoration: none;
 }
 
 .bloglink:hover{
   color: var(--text-white);
-  font-family: "Abel";
+  font-family: "Share Tech Mono";
   text-decoration: none;
 }
 
@@ -136,12 +137,21 @@
 }
 
 @media (max-width: 610px) {
+  .navimg {
+    margin-right: 10px;
+  }
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .links {
     min-width: 113px;
     display: flex;
     flex-direction: column;
     padding: none;
     margin-left: 10px;
+    margin-right: -px;
   }
 }
 
