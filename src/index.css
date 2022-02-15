@@ -135,6 +135,16 @@
   cursor: pointer;
 }
 
+@media (max-width: 610px) {
+  .links {
+    min-width: 113px;
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    margin-left: 10px;
+  }
+}
+
 /* create new blog form */
 .create {
   max-width: 400px;
