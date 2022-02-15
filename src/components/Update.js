@@ -15,7 +15,7 @@ const Update = () => {
 
         setIsPending(true);
         
-        fetch('http://localhost:8000/blogs/' + location.state.id, {
+        fetch('https://foxblog-db.herokuapp.com/blogs/' + location.state.id, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(blog)

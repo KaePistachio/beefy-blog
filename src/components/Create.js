@@ -18,7 +18,7 @@ const Create = () => {
 
         blog.author = blog.author === 'generate' ? AuthorGenerator() : blog.author;
         
-        fetch('http://localhost:8000/blogs', {
+        fetch('https://foxblog-db.herokuapp.com/blogs', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(blog)
