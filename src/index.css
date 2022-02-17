@@ -119,21 +119,47 @@
 }
 
 /* blog details page */
+.blog-details {
+  padding: 20px;
+  background-color: var(--div-bg);
+  border: 5px solid var(--bg);
+}
+.blog-art {
+  background-color: var(--div-bg);
+}
+
 .blog-details h2 {
-  font-size: 20px;
-  color: #f1356d;
+  background-color: var(--div-bg);
+  text-align: center;
+  font-size: 25px;
+  color: var(--border);
   margin-bottom: 10px;
 }
+
+.blog-details p {
+  background-color: var(--div-bg);
+  font-size: 0.8rem;
+  color: var(--border);
+}
+
 .blog-details div {
+  background-color: var(--div-bg);
   margin: 20px 0;
 }
 .blog-details button {
-  background: #f1356d;
+  background: var(--border);
+  margin-left: 10px;
+  margin-right: 10px;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.blog-details button:hover {
+  background-color: var(--text-white);
+  color: var(--border)
 }
 
 @media (max-width: 610px) {
@@ -158,16 +184,18 @@
 /* create new blog form */
 .create {
   max-width: 400px;
+  padding: 20px;
   margin: 0 auto;
   text-align: center;
 }
 .create label {
+  color: var(--border);
   text-align: left;
   display: block;
 }
 .create h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: var(--border);
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -178,10 +206,32 @@
   box-sizing: border-box;
   display: block;
 }
+
+.create select:focus {
+  outline: none;
+}
+
+.create input:focus, .create textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--border);
+  transition: 0.5s;
+}
+
 .create button {
-  background: #f1356d;
+  background: var(--border);
   color: #fff;
   border: 0;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create button:hover {
+  background: var(--text-white);
+  color: var(--border);
+  border: 0;
+  margin-top: 10px;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;

@@ -32,7 +32,7 @@ const BlogDetails = () => {
       { isPending && <div>Loading...</div>}
       { error && <div>{ error }</div>}
       { blog && (
-          <article>
+          <article className="blog-art">
               <h2>{ blog.title }</h2>
               <p>Written by { blog.author }</p>
               <div>{ blog.body }</div>
